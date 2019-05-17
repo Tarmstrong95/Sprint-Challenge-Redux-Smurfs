@@ -23,7 +23,7 @@ export const ERROR = "ERROR";
 */
 
 
-export const action = (dispatch) => {
+export const action = () => (dispatch) => {
   dispatch({type: GET_SMURFS})
   axios.get('http://localhost:3333/smurfs/')
   .then(res => dispatch({

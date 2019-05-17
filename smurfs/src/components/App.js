@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import {action} from '../actions/index';
 import {connect} from 'react-redux';
+import SmurfList from './smurfList/smurfList';
+import Form from './form/form'
 /*
  to wire this component up you're going to need a few things.
  I'll let you do this part on your own. 
@@ -22,7 +24,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        
+        <SmurfList />
+        <Form />
       </div>
     );
   }
