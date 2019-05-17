@@ -35,3 +35,10 @@ export const action = () => (dispatch) => {
     payload: err
   }))
 }
+
+export const addASmurft = smurf => dispatch => {
+  dispatch({type: ADD_SMURF})
+  axios.post('http://localhost:3333/smurfs/', smurf)
+  .then(res => dispatch({type: SUCCESS, payload: res.data}))
+  .catch(err => dispatch({type: ERROR, payload: err}))
+}

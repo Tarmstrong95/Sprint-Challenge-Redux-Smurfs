@@ -20,6 +20,13 @@ const reducer = (state=initialState, action) => {
       ...state,
       fetchingSmurfs: true
     })
+
+    case ADD_SMURF:
+    return ({
+      ...state,
+      fetchingSmurfs: false,
+      addingSmurf: true
+    })
   
     case SUCCESS:
     return ({
